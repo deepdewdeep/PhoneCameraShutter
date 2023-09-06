@@ -19,7 +19,8 @@ The **Remote Mobile Camera Shutter** is an innovative device that enhances your 
 
 - **Elegant Enclosure:** The 3D-printed enclosure not only shields internal components but also adds a touch of style to your mobile photography and videography setup.
 
-- **Long Battery Life:** Efficient power management ensures extended usage on a single LiPo battery charge.
+- **Li-Po Battery:** The device is powered by a high-performance 3.7V 802540 600mAh Li-Po battery, ensuring extended usage between charges. This lightweight and compact power source provides reliable energy for your photography and videography adventures.
+
 
 - **Open Source:** This project is open source, fostering collaboration and inviting fellow makers and enthusiasts to contribute and customize. It utilizes the Arduino framework for easy development.
 
@@ -50,13 +51,17 @@ This README provides an in-depth exploration of the circuit design, component se
 
 The circuit design of the Remote Mobile Camera Shutter combines efficiency, reliability, and low power consumption to deliver a compact and versatile solution for mobile photography enthusiasts. Here, we'll explore key components and design choices that make this project a reality.
 
+### Power Supply with Li-Po Battery
+
+The device is powered by a high-capacity 3.7V 802540 600mAh Li-Po battery, ensuring extended usage between charges. This lightweight and compact power source provides reliable energy for your photography and videography adventures. The power management circuitry efficiently utilizes the Li-Po battery's capacity while maintaining stable voltage levels.
+
 ### Power Regulation with TPS7A2033PDBVR
 
-One of the critical components in the circuit is the **TPS7A2033PDBVR Low Dropout Regulator**. This regulator provides stable and reliable power to the entire system, ensuring consistent performance even as the battery voltage decreases. Key features of this regulator include:
+One of the critical components in the circuit is the **TPS7A2033PDBVR Low Dropout Regulator**. This regulator ensures stable and reliable power distribution throughout the system, regardless of the battery voltage. Key features of this regulator include:
 
-- **Low Dropout Voltage:** The TPS7A2033PDBVR boasts a low dropout voltage, minimizing wasted energy and maximizing the battery life. This is crucial for extended usage without frequent recharging.
+- **Low Dropout Voltage:** The TPS7A2033PDBVR boasts a low dropout voltage, minimizing wasted energy and maximizing battery life, a crucial factor for extended usage without frequent recharging.
 
-- **Efficiency:** The regulator's high efficiency further contributes to power savings, making it an ideal choice for battery-powered applications.
+- **Efficiency:** The regulator's high efficiency contributes to overall power savings, making it an ideal choice for battery-powered applications.
 
 - **Voltage Stability:** It maintains a stable output voltage, ensuring that the ESP32-WROOM-32D microcontroller and other components operate within their specified voltage range.
 
