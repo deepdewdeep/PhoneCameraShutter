@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Remote Mobile Camera Shutter** is a groundbreaking project that leverages the power of the ESP32 microcontroller and Arduino IDE to create a Bluetooth Low Energy (BLE) Human Interface Device (HID). This innovative device transforms your smartphone into a versatile and remote-controlled camera, adding convenience and creativity to your mobile photography and videography experiences.
+The **Remote Mobile Camera Shutter** is a that leverages the power of the ESP32 microcontroller and Arduino IDE to create a Bluetooth Low Energy (BLE) Human Interface Device (HID). This innovative device transforms your smartphone into a versatile and remote-controlled camera, adding convenience and creativity to your mobile photography and videography experiences.
 
 **Key Features:**
 
