@@ -45,6 +45,25 @@ This README provides an in-depth look at the circuit design, component selection
 
 ## Circuit Design
 
+The circuit design of the Remote Mobile Camera Shutter is a testament to efficiency and compactness. We've carefully selected and integrated Surface Mount Device (SMD) components to optimize the device's size and performance. SMD components are renowned for their smaller form factor and reliability, making them ideal for projects where space is a premium.
+
+**Key Circuit Design Highlights:**
+
+- **Compact Form Factor:** We've meticulously designed the circuit to minimize its footprint while maximizing functionality. The compact size ensures that the Remote Mobile Camera Shutter is easy to carry and integrate into your mobile photography setup.
+
+- **Surface Mount Devices (SMD):** SMD components play a pivotal role in achieving the device's compactness. These components are soldered directly onto the surface of the PCB, eliminating the need for bulky through-hole components.
+
+- **Strength Where It Matters:** While we've embraced SMD components for their space-saving advantages, we've strategically used Surface Mount Technology (SMT) components in areas where physical strength and reliability are crucial. This hybrid approach ensures that the device can withstand everyday use and potential wear and tear.
+
+- **Two-Layer PCB:** The circuit design is implemented on a two-layer PCB. This design choice strikes a balance between complexity and simplicity, making the PCB layout more accessible for hobbyists and makers while maintaining high performance.
+
+- **Designed with Altium Designer (Version 22.4.2):** The PCB layout and design were meticulously crafted using Altium Designer, version 22.4.2, a leading electronic design automation software. Altium Designer enabled us to create a PCB layout that optimized signal integrity and minimized interference.
+
+![PCB Image](link-to-pcb-image.jpg)
+
+
+
+
 ## Component Selection
 ## PCB Design
 ## Enclosure Design
