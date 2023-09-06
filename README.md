@@ -1,8 +1,5 @@
 # Remote Mobile Camera Shutter
 
-
-
-
 ## Overview
 
 The **Remote Mobile Camera Shutter** is a groundbreaking project that leverages the power of the ESP32 microcontroller and Arduino IDE to create a Bluetooth Low Energy (BLE) Human Interface Device (HID). This innovative device transforms your smartphone into a versatile and remote-controlled camera, adding convenience and creativity to your mobile photography and videography experiences.
@@ -19,7 +16,7 @@ The **Remote Mobile Camera Shutter** is a groundbreaking project that leverages 
 
 - **Long Battery Life:** Thanks to efficient power management and a high-capacity 3.7V 802540 600mAh Li-Po battery, you can enjoy extended usage on a single charge.
 
-- **Open Source:** We believe in the spirit of collaboration, and this project is open source, inviting fellow makers and enthusiasts to contribute and customize.
+- **Open Source:** I believe in the spirit of collaboration, and this project is open source, inviting fellow makers and enthusiasts to contribute and customize.
 
 **Technical Insights:**
 
@@ -27,11 +24,11 @@ The Remote Mobile Camera Shutter is built upon the principles of BLE HID (Blueto
 
 - **BLE Library Integration:** The project utilizes various libraries for seamless interaction with BLE and HID devices, ensuring a robust and reliable connection.
 
-- **BLE Server Callbacks:** Callback functions are defined within the MyCallbacks class to handle device connections and disconnections. When a device connects, it enables notifications on the input report, enhancing communication efficiency.
+- **BLE Server Callbacks:** Callback functions are defined to handle device connections and disconnections. When a device connects, it enables notifications on the input report, enhancing communication efficiency.
 
-- **Output Callbacks:** The MyOutputCallbacks class manages data written to the output report, logging special keys received during operation.
+- **Output Callbacks:** The project manages data written to the output report, logging special keys received during operation.
 
-- **taskServer Function:** The taskServer function serves as the core of the project. It initializes the BLE server, configures the HID device, defines the report map for the keyboard, and initiates advertising of the HID service. Additional settings such as manufacturer information, PnP ID, HID info, and security parameters are also established here.
+- **taskServer Function:** This function serves as the core of the project. It initializes the BLE server, configures the HID device, defines the report map for the keyboard, and initiates advertising of the HID service. Additional settings such as manufacturer information, PnP ID, HID info, and security parameters are also established here.
 
 - **setup Function:** The setup function is the heart of the Arduino setup routine. It initializes serial communication, configures the button pin as an input, attaches an interrupt to the button pin, sets up the LED pin, and creates a task to execute the taskServer function.
 
@@ -48,7 +45,7 @@ In summary, the Remote Mobile Camera Shutter empowers you to redefine your mobil
 
 ## Circuit Design and Component Selection
 
-The circuit design of the Remote Mobile Camera Shutter combines efficiency, reliability, and low power consumption to deliver a compact and versatile solution for mobile photography enthusiasts. Here, we'll explore key components and design choices that make this project a reality.
+The circuit design of the Remote Mobile Camera Shutter combines efficiency, reliability, and low power consumption to deliver a compact and versatile solution for mobile photography enthusiasts. Here, I'll explore key components and design choices that make this project a reality.
 
 ### Power Supply with Li-Po Battery
 
@@ -74,19 +71,19 @@ The heart of the Remote Mobile Camera Shutter is the **ESP32-WROOM-32D microcont
 
 ## PCB Design
 
-The PCB design of the Remote Mobile Camera Shutter is a testament to efficiency and compactness. We've carefully selected and integrated Surface Mount Device (SMD) components to optimize the device's size and performance. SMD components are renowned for their smaller form factor and reliability, making them ideal for projects where space is a premium.
+The PCB design of the Remote Mobile Camera Shutter is a testament to efficiency and compactness. I've carefully selected and integrated Surface Mount Device (SMD) components to optimize the device's size and performance. SMD components are renowned for their smaller form factor and reliability, making them ideal for projects where space is a premium.
 
 **Key PCB Design Highlights:**
 
-- **Compact Form Factor:** We've meticulously designed the PCB to minimize its footprint while maximizing functionality. The compact size ensures that the Remote Mobile Camera Shutter is easy to carry and integrate into your mobile photography setup.
+- **Compact Form Factor:** I've meticulously designed the PCB to minimize its footprint while maximizing functionality. The compact size ensures that the Remote Mobile Camera Shutter is easy to carry and integrate into your mobile photography setup.
 
 - **Surface Mount Devices (SMD):** SMD components play a pivotal role in achieving the device's compactness. These components are soldered directly onto the surface of the PCB, eliminating the need for bulky through-hole components.
 
-- **Strength Where It Matters:** While we've embraced SMD components for their space-saving advantages, we've strategically used Surface Mount Technology (SMT) components in areas where physical strength and reliability are crucial. This hybrid approach ensures that the device can withstand everyday use and potential wear and tear.
+- **Strength Where It Matters:** While I've embraced SMD components for their space-saving advantages, I've strategically used Surface Mount Technology (SMT) components in areas where physical strength and reliability are crucial. This hybrid approach ensures that the device can withstand everyday use and potential wear and tear.
 
 - **Two-Layer PCB:** The circuit design is implemented on a two-layer PCB. This design choice strikes a balance between complexity and simplicity, making the PCB layout more accessible for hobbyists and makers while maintaining high performance.
 
-- **Designed with Altium Designer (Version 22.4.2):** The PCB layout and design were meticulously crafted using Altium Designer, version 22.4.2, a leading electronic design automation software. Altium Designer enabled us to create a PCB layout that optimized signal integrity and minimized interference.
+- **Designed with Altium Designer (Version 22.4.2):** The PCB layout and design were meticulously crafted using Altium Designer, version 22.4.2, a leading electronic design automation software. Altium Designer enabled me to create a PCB layout that optimized signal integrity and minimized interference.
 
 ![Screenshot 2023-09-06 180453](https://github.com/deepdewdeep/Remote-Mobile-Camera-Shutter/assets/56537975/c3b1d5b9-ae9e-4c21-85ec-3f60c6e39e69)
 
@@ -96,7 +93,7 @@ The enclosure design of the Remote Mobile Camera Shutter serves both protective 
 
 ### Dual Design Approach
 
-We've adopted a dual design approach, offering two distinct enclosure designs:
+I've adopted a dual design approach, offering two distinct enclosure designs:
 
 1. **Minimalist Design:** This design emphasizes simplicity and functionality. It provides a clean and unobtrusive look, ensuring that the Remote Mobile Camera Shutter integrates seamlessly with your setup. It prioritizes a sleek, understated appearance.
 
@@ -104,11 +101,11 @@ We've adopted a dual design approach, offering two distinct enclosure designs:
 
 ### Solidworks Software
 
-To create these enclosures, we rely on **Solidworks**, a professional 3D modeling and design software known for its precision and versatility. Key aspects of our enclosure design process using Solidworks include:
+To create these enclosures, I rely on **Solidworks**, a professional 3D modeling and design software known for its precision and versatility. Key aspects of my enclosure design process using Solidworks include:
 
 - **Precision Fit:** Every enclosure is designed to provide a precise fit for all internal components. This ensures that the device is securely housed within and well-protected.
 
-- **Customization:** Solidworks allows us to tailor the enclosures to specific design requirements. We can accommodate different button layouts, LED placements, and access points, ensuring flexibility and functionality.
+- **Customization:** Solidworks allows me to tailor the enclosures to specific design requirements. I can accommodate different button layouts, LED placements, and access points, ensuring flexibility and functionality.
 
 - **Durability:** The enclosures are engineered to withstand daily usage and potential impacts, safeguarding the internal electronics effectively.
 
@@ -122,10 +119,10 @@ To create these enclosures, we rely on **Solidworks**, a professional 3D modelin
 
 The **Remote Mobile Camera Shutter** project represents the fusion of innovation, versatility, and open-source collaboration. Designed to amplify your mobile photography and videography experiences, this device redefines how you interact with your smartphone's camera. With an impressive extended range, seamless Bluetooth connectivity, and user-friendly features, it unlocks a world of possibilities for content creators, photographers, vloggers, and enthusiasts.
 
-By choosing an open-source approach, we invite the maker community to join us in refining and customizing the Remote Mobile Camera Shutter. Whether you're a seasoned developer looking to contribute to the codebase or a hobbyist eager to build your own remote camera controller, this project provides a valuable platform for exploration and learning.
+By choosing an open-source approach, I invite the maker community to join me in refining and customizing the Remote Mobile Camera Shutter. Whether you're a seasoned developer looking to contribute to the codebase or a hobbyist eager to build your own remote camera controller, this project provides a valuable platform for exploration and learning.
 
 As technology continues to shape the way we capture and share moments, the Remote Mobile Camera Shutter stands as a testament to the endless possibilities of DIY electronics and the collaborative spirit of the maker community. Embrace the freedom to capture, create, and innovate with the Remote Mobile Camera Shutter.
 
-We hope this project inspires you to embark on your own journey of exploration and creativity in the world of embedded systems and mobile content creation. Share your experiences, ideas, and improvements, and together, we can push the boundaries of what's possible with technology.
+I hope this project inspires you to embark on your own journey of exploration and creativity in the world of embedded systems and mobile content creation. Share your experiences, ideas, and improvements, and together, we can push the boundaries of what's possible with technology.
 
-Thank you for joining us on this exciting venture. Now, it's your turn to capture the extraordinary, one remote click at a time.
+Thank you for joining me on this exciting venture. Now, it's your turn to capture the extraordinary, one remote click at a time.
