@@ -5,44 +5,43 @@
 
 ## Overview
 
-The **Remote Mobile Camera Shutter** is an innovative device that enhances your mobile photography and videography experience, offering a unique blend of extended range control and convenience. With the prevalence of smartphone photography and content creation, this project was developed to empower users to capture images and initiate video recording remotely, eliminating the need for assistance.
+The **Remote Mobile Camera Shutter** is a groundbreaking project that leverages the power of the ESP32 microcontroller and Arduino IDE to create a Bluetooth Low Energy (BLE) Human Interface Device (HID). This innovative device transforms your smartphone into a versatile and remote-controlled camera, adding convenience and creativity to your mobile photography and videography experiences.
 
 **Key Features:**
 
-- **Extended Range:** This device sets itself apart with an impressive wireless range of up to 100 meters in open spaces and approximately 10 meters indoors. It opens up new possibilities for capturing distant subjects, making it perfect for group photos, outdoor adventures, and unique angles.
+- **Extended Range:** Experience unprecedented wireless freedom with a range of up to 100 meters in open spaces and approximately 10 meters in closed environments. Say goodbye to limitations and capture moments from unique perspectives.
 
-- **Vlogger and YouTuber Friendly:** Designed with content creators in mind, the Remote Mobile Camera Shutter simplifies the recording process. It enables you to effortlessly start and stop video recording on your smartphone, enhancing the quality of your content.
+- **Vlogger and YouTuber Companion:** For content creators who rely on their smartphones, the Remote Mobile Camera Shutter is a game-changer. Start and stop video recording remotely, achieving professional-quality content effortlessly.
 
-- **Custom Hardware:** Built around the powerful ESP32-WROOM-32D chip, the device combines robust processing capabilities with efficient Bluetooth communication. It utilizes the Bluetooth Low Energy (BLE) technology stack for seamless communication.
+- **Custom Hardware:** Powered by the ESP32-WROOM-32D microcontroller, this device combines robust processing capabilities with energy efficiency. Its low power consumption ensures long-lasting performance.
 
-- **Bluetooth HID Keyboard Emulation:** The Remote Mobile Camera Shutter operates as a Bluetooth Human Interface Device (HID) keyboard, mimicking the functionality of a physical keyboard. It leverages the HID protocol to send keypress events wirelessly to your smartphone, triggering camera functions with ease.
+- **Elegant Enclosure:** The 3D-printed enclosure not only protects the internal components but also adds a touch of style to your mobile photography and videography setup.
 
-- **Elegant Enclosure:** The 3D-printed enclosure not only shields internal components but also adds a touch of style to your mobile photography and videography setup.
+- **Long Battery Life:** Thanks to efficient power management and a high-capacity 3.7V 802540 600mAh Li-Po battery, you can enjoy extended usage on a single charge.
 
-- **Li-Po Battery:** The device is powered by a high-performance 3.7V 802540 600mAh Li-Po battery, ensuring extended usage between charges. This lightweight and compact power source provides reliable energy for your photography and videography adventures.
+- **Open Source:** We believe in the spirit of collaboration, and this project is open source, inviting fellow makers and enthusiasts to contribute and customize.
 
+**Technical Insights:**
 
-- **Open Source:** This project is open source, fostering collaboration and inviting fellow makers and enthusiasts to contribute and customize. It utilizes the Arduino framework for easy development.
+The Remote Mobile Camera Shutter is built upon the principles of BLE HID (Bluetooth Low Energy Human Interface Device). It relies on a range of libraries to create a Bluetooth keyboard that sends keypress events when a button is pressed and released. Here are some technical highlights:
 
-**Why Remote Mobile Camera Shutter?**
+- **BLE Library Integration:** The project utilizes various libraries for seamless interaction with BLE and HID devices, ensuring a robust and reliable connection.
 
-The Remote Mobile Camera Shutter was conceived to eliminate the limitations of traditional remote camera controls. It extends your photography and videography capabilities with an impressive wireless range. Whether you're taking group photos, selfies, shooting creative content, or recording vlogs and YouTube videos, this device empowers you to control your smartphone's camera remotely, unlocking new possibilities.
+- **BLE Server Callbacks:** Callback functions are defined within the MyCallbacks class to handle device connections and disconnections. When a device connects, it enables notifications on the input report, enhancing communication efficiency.
 
-**Use Cases:**
+- **Output Callbacks:** The MyOutputCallbacks class manages data written to the output report, logging special keys received during operation.
 
-- **Extended Range Photography:** Capture moments from a distance with an unparalleled range of up to 100 meters in open spaces, reducing the reliance on others to take your photos.
+- **taskServer Function:** The taskServer function serves as the core of the project. It initializes the BLE server, configures the HID device, defines the report map for the keyboard, and initiates advertising of the HID service. Additional settings such as manufacturer information, PnP ID, HID info, and security parameters are also established here.
 
-- **Vlogger and YouTuber Essential:** Streamline your content creation process by easily starting and stopping video recording, ensuring you capture every moment seamlessly.
+- **setup Function:** The setup function is the heart of the Arduino setup routine. It initializes serial communication, configures the button pin as an input, attaches an interrupt to the button pin, sets up the LED pin, and creates a task to execute the taskServer function.
 
-- **Group Photos:** Effortlessly capture group photos without the need for a third-party photographer.
+- **loop Function:** The loop function represents the primary execution loop of the project. It continuously checks if the button is pressed (btnFlag is set) and whether a BLE device is connected (connected is true). When both conditions are met, it emulates keypress events by manipulating values in the input report, notifies the change, briefly waits, and then releases the key. Visual feedback is provided through LED toggling.
 
-- **Selfies:** Take perfect selfies with control over when the shot is taken.
+- **pushButton Function (Interrupt Handler):** The pushButton function serves as an interrupt handler, responsible for setting the btnFlag when the button is pressed. It also detaches the interrupt to prevent multiple triggers.
 
-- **Creative Shots:** Experiment with unique angles and perspectives for your photography and videography projects.
+In summary, the Remote Mobile Camera Shutter empowers you to redefine your mobile photography and videography experiences. With an extended wireless range, effortless remote control, and an open-source foundation, this project invites you to explore new horizons in smartphone content creation.
 
-This README provides an in-depth exploration of the circuit design, component selection, PCB layout, enclosure design, and the overall development journey of the Remote Mobile Camera Shutter. Whether you're interested in replicating the project, contributing to its development, or simply exploring the world of embedded systems and mobile content creation, you'll find valuable insights and resources here.
-
-![Remote Mobile Camera Shutter](https://github.com/deepdewdeep/PhoneCameraShutter/assets/56537975/31b3923a-5b25-4e3f-a4ff-34998637e3c5)
+![shutter](https://github.com/deepdewdeep/PhoneCameraShutter/assets/56537975/31b3923a-5b25-4e3f-a4ff-34998637e3c5)
 
 *Capture moments from a distance and revolutionize your content creation with the Remote Mobile Camera Shutter.*
 
@@ -112,6 +111,11 @@ To create these enclosures, we rely on **Solidworks**, a professional 3D modelin
 - **Customization:** Solidworks allows us to tailor the enclosures to specific design requirements. We can accommodate different button layouts, LED placements, and access points, ensuring flexibility and functionality.
 
 - **Durability:** The enclosures are engineered to withstand daily usage and potential impacts, safeguarding the internal electronics effectively.
+
+  ![image](https://github.com/deepdewdeep/Remote-Mobile-Camera-Shutter/assets/56537975/5f4b1448-929e-4229-b352-2047ba4f52f0)
+  ![image](https://github.com/deepdewdeep/Remote-Mobile-Camera-Shutter/assets/56537975/afdf3d44-b108-4a25-b837-8413cabb7d6d)
+
+
 
 
 ## Conclusion
