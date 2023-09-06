@@ -59,9 +59,7 @@ The circuit design of the Remote Mobile Camera Shutter is a testament to efficie
 
 - **Designed with Altium Designer (Version 22.4.2):** The PCB layout and design were meticulously crafted using Altium Designer, version 22.4.2, a leading electronic design automation software. Altium Designer enabled us to create a PCB layout that optimized signal integrity and minimized interference.
 
-![PCB Image](link-to-pcb-image.jpg)
-
-
+![Screenshot 2023-09-06 180453](https://github.com/deepdewdeep/Remote-Mobile-Camera-Shutter/assets/56537975/c3b1d5b9-ae9e-4c21-85ec-3f60c6e39e69)
 
 
 ## Component Selection
